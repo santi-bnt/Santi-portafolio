@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000" fill="none">
+  <title>WebXR motor-control interaction reconstruction</title>
+  <desc>A reconstructed VR control panel, draggable angle target, stop and reset controls. Telemetry is intentionally unavailable; this is not a headset screenshot.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1500" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#182a44"/><stop offset="1" stop-color="#070e19"/></linearGradient>
+    <radialGradient id="ball" cx=".35" cy=".3" r=".8"><stop stop-color="#d1fff8"/><stop offset=".35" stop-color="#70e3d2"/><stop offset="1" stop-color="#24665e"/></radialGradient>
+    <linearGradient id="panel" x2="1100" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#1c304d"/><stop offset="1" stop-color="#101e32"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="23" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1500" height="1000" rx="24" fill="url(#bg)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="87" fill="#8ba3c3" font-size="20" letter-spacing="3">WEBXR / INTERACTION RECONSTRUCTION</text>
+    <text x="72" y="155" fill="#edf4ff" font-size="48" font-weight="600" letter-spacing="-1.5">A virtual target. A physical control loop.</text>
+    <path d="m60 857 690-240 690 240" stroke="#21354e" stroke-width="2"/>
+    <path d="M60 857h1380M220 940l530-323 530 323" stroke="#1d3047" stroke-width="2"/>
+    <!-- Reconstructed from escena.ts and the documented panel fields. -->
+    <g transform="translate(239 215) rotate(-2 510 200)" filter="url(#shadow)">
+      <rect width="1020" height="365" rx="19" fill="url(#panel)" stroke="#49627f" stroke-width="2"/>
+      <text x="40" y="60" fill="#e8f0ff" font-size="30" font-weight="600">Motor position control</text>
+      <text x="980" y="59" text-anchor="end" fill="#91a9c9" font-size="19">TELEMETRY —</text>
+      <path d="M39 89h942" stroke="#3b506d"/>
+      <g fill="#0d192b" stroke="#324964"><rect x="39" y="116" width="218" height="108" rx="8"/><rect x="280" y="116" width="218" height="108" rx="8"/><rect x="521" y="116" width="218" height="108" rx="8"/><rect x="762" y="116" width="218" height="108" rx="8"/></g>
+      <g fill="#91a9c9" font-size="19"><text x="59" y="150">Setpoint</text><text x="300" y="150">Encoder position</text><text x="541" y="150">Error</text><text x="782" y="150">PWM</text></g>
+      <g fill="#dceaff" font-size="42"><text x="59" y="203">—</text><text x="300" y="203">—</text><text x="541" y="203">—</text><text x="782" y="203">—</text></g>
+      <rect x="39" y="249" width="942" height="81" rx="7" fill="#0b1728" stroke="#2b425d"/>
+      <text x="65" y="298" fill="#7891b4" font-size="19">Confirmed telemetry · no hardware connected in this illustration</text>
+    </g>
+    <text x="750" y="647" text-anchor="middle" fill="#dbeaff" font-size="25" font-weight="600" letter-spacing="1">GRAB THE BALL AND SET THE ANGLE</text>
+    <path d="M300 721h900" stroke="#455b7b" stroke-width="12" stroke-linecap="round"/>
+    <g stroke="#7891b0" stroke-width="3"><path d="M300 707v28M525 707v28M750 707v28M975 707v28M1200 707v28"/></g>
+    <g fill="#97aecb" font-size="23" text-anchor="middle"><text x="300" y="778">−180°</text><text x="525" y="778">−90°</text><text x="750" y="778">0°</text><text x="975" y="778">90°</text><text x="1200" y="778">180°</text></g>
+    <ellipse cx="750" cy="737" rx="54" ry="13" fill="#000" opacity=".3"/>
+    <circle cx="750" cy="714" r="39" fill="url(#ball)" stroke="#8de5da" stroke-width="2"/>
+    <path d="m1312 871-526-142" stroke="#7bafff" stroke-width="2" stroke-dasharray="7 10"/>
+    <g transform="translate(1255 810) rotate(24 60 70)"><ellipse cx="60" cy="25" rx="39" ry="23" fill="#273c59" stroke="#9eafc8" stroke-width="3"/><rect x="32" y="40" width="56" height="103" rx="25" fill="#b5c2d4"/><ellipse cx="59" cy="35" rx="29" ry="18" fill="#405575"/><circle cx="61" cy="31" r="7" fill="#a1b9da"/></g>
+    <rect x="477" y="824" width="250" height="72" rx="9" fill="#a32d43" stroke="#c65c6d"/>
+    <rect x="754" y="824" width="250" height="72" rx="9" fill="#20324c" stroke="#4e6686"/>
+    <text x="602" y="869" text-anchor="middle" fill="#fff1f3" font-size="24" font-weight="700">STOP MOTOR</text>
+    <text x="879" y="869" text-anchor="middle" fill="#e5efff" font-size="24" font-weight="700">RESET</text>
+    <text x="72" y="964" fill="#7890b2" font-size="18">RECONSTRUCTED INTERACTION VIEW · based on repository source · not a headset capture</text>
+  </g>
+</svg>

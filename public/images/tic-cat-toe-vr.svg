@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 1500 1000" fill="none">
+  <title>Tic-Cat-Toe — virtual board and Cartesian interaction study</title>
+  <desc>Illustrative reconstruction of the documented Meta Quest tic-tac-toe interaction with a Cartesian head, target cell and controller. The game state and physical layout are illustrative.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1500" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#17283f"/><stop offset="1" stop-color="#080e19"/></linearGradient>
+    <linearGradient id="table" x2="600" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#ecc3d2"/><stop offset="1" stop-color="#bb90aa"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="20" stdDeviation="20" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1500" height="1000" rx="24" fill="url(#bg)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="87" fill="#8ba3c3" font-size="20" letter-spacing="3">META QUEST / INTERACTION STUDY</text>
+    <text x="72" y="155" fill="#edf4ff" font-size="48" font-weight="600" letter-spacing="-1.5">A shared board, beyond the screen.</text>
+    <text x="72" y="204" fill="#9aafca" font-size="25">Player input → BLE → Cartesian motion</text>
+    <path d="m100 860 650-260 650 260" stroke="#23364f" stroke-width="2"/>
+    <path d="M100 860h1300" stroke="#23364f" stroke-width="2"/>
+    <!-- Virtual board concept, not a claim about the exact physical mechanism. -->
+    <g filter="url(#shadow)">
+      <path d="M545 396 1122 546 852 894 275 744Z" fill="#483a50"/>
+      <path d="m545 370 577 150-270 348-577-150Z" fill="url(#table)" stroke="#f3d6e1" stroke-width="3"/>
+      <g transform="matrix(.96 .25 -.45 .58 545 370)">
+        <rect x="35" y="35" width="530" height="530" rx="15" fill="#dcb6cb" stroke="#785c77" stroke-width="7"/>
+        <path d="M212 36v530M388 36v530M36 212h530M36 388h530" stroke="#82647f" stroke-width="6"/>
+        <rect x="219" y="219" width="162" height="162" rx="6" fill="#86baff" fill-opacity=".7" stroke="#d1e6ff" stroke-width="6"/>
+        <g stroke="#283b50" stroke-width="18" stroke-linecap="round"><path d="m90 90 66 66m0-66-66 66M442 442l66 66m0-66-66 66"/></g>
+        <circle cx="475" cy="122" r="46" stroke="#cf7845" stroke-width="18"/>
+        <circle cx="122" cy="475" r="46" stroke="#cf7845" stroke-width="18"/>
+        <circle cx="300" cy="300" r="38" stroke="#f4cb62" stroke-width="7" stroke-dasharray="14 9"/>
+      </g>
+      <!-- Schematic Cartesian carriage overlay. -->
+      <path d="M340 615 620 258 1180 404" stroke="#7f93ad" stroke-width="14" stroke-linecap="round"/>
+      <path d="M387 628 667 270 1227 416" stroke="#354c67" stroke-width="7" stroke-linecap="round"/>
+      <path d="m481 439 561 146" stroke="#9baac0" stroke-width="15"/>
+      <path d="m490 455 561 146" stroke="#415b78" stroke-width="6"/>
+      <path d="m729 490 36 10-23 32-36-10Z" fill="#d4e2f4" stroke="#536e8e" stroke-width="3"/>
+      <path d="M724 519v39" stroke="#f4cc65" stroke-width="7"/>
+      <ellipse cx="724" cy="568" rx="26" ry="12" stroke="#f4cc65" stroke-width="4"/>
+    </g>
+    <g transform="translate(1035 240) rotate(3)">
+      <rect width="359" height="150" rx="12" fill="#122037" stroke="#536a89" stroke-width="2"/>
+      <text x="25" y="45" fill="#91a8c8" font-size="18">INTERACTION MODE</text>
+      <text x="25" y="88" fill="#e5efff" font-size="30" font-weight="600">Claw machine</text>
+      <text x="25" y="124" fill="#9db3d0" font-size="19">Move · settle · detect a cell</text>
+    </g>
+    <g transform="translate(89 311)">
+      <rect width="285" height="158" rx="12" fill="#122037" stroke="#3d5574"/>
+      <text x="25" y="42" fill="#94abc9" font-size="19">TWO PLAYERS</text>
+      <text x="25" y="94" fill="#c9d7e9" font-size="34" font-weight="600">X</text>
+      <path d="M78 82h80" stroke="#47617f" stroke-width="2"/>
+      <text x="188" y="94" fill="#e1a274" font-size="34" font-weight="600">O</text>
+      <text x="25" y="130" fill="#91a8c8" font-size="18">BLE / ESP32-S3</text>
+    </g>
+    <path d="m1261 813-502-235" stroke="#75adfa" stroke-width="2" stroke-dasharray="7 11"/>
+    <g transform="translate(1223 755) rotate(-24 58 70)"><ellipse cx="60" cy="25" rx="39" ry="23" fill="#273c59" stroke="#9eafc8" stroke-width="3"/><rect x="32" y="40" width="56" height="103" rx="25" fill="#b5c2d4"/><ellipse cx="59" cy="35" rx="29" ry="18" fill="#405575"/><circle cx="61" cy="31" r="7" fill="#a1b9da"/></g>
+    <text x="72" y="964" fill="#7890b2" font-size="18">CONCEPT RECONSTRUCTION · illustrative game state and geometry · not a headset capture</text>
+  </g>
+</svg>
