@@ -50,6 +50,11 @@ belongs to the interface source and is not a physical robot photograph.
 
 ## Hand-authored SVG illustrations
 
+- `satzivo-system.svg`: an architecture and learning-domain illustration based on
+  the [satzivo README](https://github.com/santi-bnt/satzivo/blob/main/README.md),
+  React/TypeScript frontend, Express study routes, and Supabase RLS migration.
+  German/Spanish/English text is illustrative. No dashboard metrics, learner
+  records, official certification, or authenticated product screenshot is implied.
 - `skiliair-system.svg`: generic Raspberry Pi, analog dust acquisition, ADC/I2C,
   LCD, local outputs, and ventilation. Based on the
   [README](https://github.com/santi-bnt/raspberrypi-air-quality-monitor/blob/main/README.md)

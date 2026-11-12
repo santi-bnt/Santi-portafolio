@@ -58,6 +58,30 @@ implemented. P control is enabled; PI/PID gains and encoder scaling need
 validation for the actual motor. No tuned response or certified timing claim
 is made.
 
+## satzivo
+
+Sources: [README](https://github.com/santi-bnt/satzivo/blob/main/README.md),
+[package manifest](https://github.com/santi-bnt/satzivo/blob/main/package.json),
+[study API](https://github.com/santi-bnt/satzivo/blob/main/server/cloud/study.js),
+[authentication](https://github.com/santi-bnt/satzivo/blob/main/server/cloud/authenticate.js),
+[RLS migration](https://github.com/santi-bnt/satzivo/blob/main/supabase/migrations/202611080001_initial_private_data.sql),
+[dictionary inventory](https://github.com/santi-bnt/satzivo/blob/main/reports/dictionary-coverage.json),
+and [verification report](https://github.com/santi-bnt/satzivo/blob/main/docs/verification.md).
+
+The React/TypeScript entry point loads the A2 application. Express/Node.js serves
+study routes; verified access tokens and PostgreSQL RLS scope user data.
+The dictionary audit records 301 entries, with partial local coverage and an
+attributed external fallback. This is separate from the smaller curated initial
+flashcard set. AI writing feedback and transcription depend on configuration;
+fallback checklists are indicative, not official scores. Physical mobile/audio
+checks and independent linguistic review remain outstanding in source docs.
+
+The deployed public page returned HTTP 200 and its sign-in screen during review.
+No account was created and no authenticated learner data was accessed. Source
+verification reports are attributed, not presented as tests rerun for this site.
+The architecture artwork is not an application screenshot. The corrected source
+repository is `santi-bnt/satzivo`; the older `Satzora` URL is not used.
+
 ## Additional projects
 
 - [FPGA](https://github.com/santi-bnt/Verilog): RTL, UART, simulation artifacts,

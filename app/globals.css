@@ -387,6 +387,14 @@ html[data-motion="full"] [data-reveal][data-visible="true"] { opacity: 1; transf
 .more-grid { overflow: visible; border-radius: 8px; }
 .small-project:first-child { border-radius: 8px 0 0 8px; }
 .small-project:last-child { border-radius: 0 8px 8px 0; }
+@media (min-width: 768px) {
+  .more-grid[data-count="1"] { grid-template-columns: 1fr; }
+  .more-grid[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .more-grid[data-count="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: hidden; }
+  .more-grid[data-count="4"] .small-project { border: 0; border-radius: 0; }
+  .more-grid[data-count="4"] .small-project:nth-child(even) { border-left: 1px solid var(--line); }
+  .more-grid[data-count="4"] .small-project:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
 .project-filter button { transition: color .2s ease, background .2s ease, border-color .2s ease, transform .25s var(--ease-out); }
 .project-filter button[aria-pressed="true"] { border-color: color-mix(in srgb, var(--accent) 42%, var(--line)); color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, var(--surface)); }
 .project-filter button:active { transform: scale(.96); }

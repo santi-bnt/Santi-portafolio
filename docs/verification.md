@@ -17,7 +17,7 @@ Build before the browser suite. Playwright starts a production server on port
 
 ## Browser coverage
 
-The suite currently contains 21 tests covering:
+The suite currently contains 22 tests covering:
 
 - Home page at 375, 768, and 1440 pixels, in light and dark modes
 - Project routes, source links, image loading, and horizontal overflow
@@ -27,6 +27,7 @@ The suite currently contains 21 tests covering:
 - Layout-shift checks in the tested entrance sequence
 - MATT's conceptual SVG scan and its reduced-motion fallback
 - Image captions, reference material, and project-status boundaries
+- satzivo's Software filter, public application/source links, and detail route
 
 Screenshots and traces are stored in ignored `test-results/`.
 

@@ -16,8 +16,8 @@ export const profile = {
 };
 
 export const skills = [
-  { category: "Programming", items: ["Python", "C++", "C", "TypeScript", "Verilog"] },
-  { category: "Software & data", items: ["Next.js", "FastAPI", "Flask", "REST APIs", "PostgreSQL", "MySQL"] },
+  { category: "Programming", items: ["Python", "C++", "C", "TypeScript", "JavaScript", "Verilog"] },
+  { category: "Software & data", items: ["React", "Next.js", "Node.js", "Express", "FastAPI", "Flask", "REST APIs", "Supabase", "PostgreSQL", "MySQL"] },
   { category: "Embedded systems", items: ["Raspberry Pi", "ESP32", "ESP32-S3", "Arduino", "FRDM-KL25Z", "FreeRTOS", "Linux"] },
   { category: "Hardware & digital design", items: ["FPGA", "Intel MAX 10", "KiCad", "Digital logic", "Testbench simulation"] },
   { category: "Communication & control", items: ["UART", "BLE", "MQTT", "WebSockets", "PID", "PWM", "I2C"] },

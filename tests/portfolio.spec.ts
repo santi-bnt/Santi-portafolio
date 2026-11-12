@@ -46,7 +46,28 @@ test("filters show the correct area and can be reset", async ({ page }) => {
   await expect(page.locator("#project-results")).not.toContainText("Internship Radar");
   await page.getByRole("button", { name: /^All/ }).click();
   await expect(page.locator(".featured-project")).toHaveCount(4);
-  await expect(page.locator(".small-project")).toHaveCount(3);
+  await expect(page.locator(".small-project")).toHaveCount(4);
+});
+
+test("satzivo stays linked to its live app and verified project detail", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce", colorScheme: "dark" });
+  for (const width of [375, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto("/");
+    await page.getByRole("button", { name: "Software", exact: true }).click();
+    const card = page.locator(".small-project").filter({ has: page.getByRole("heading", { name: "satzivo", exact: true }) });
+    await expect(card).toBeVisible();
+    await expect(card.getByRole("link", { name: "Visit Website" })).toHaveAttribute("href", "https://satzivo.vercel.app");
+    await expect(card.getByRole("link", { name: "View Source" })).toHaveAttribute("href", "https://github.com/santi-bnt/satzivo");
+    await card.scrollIntoViewIfNeeded();
+    await expect.poll(() => card.locator("img").evaluate(element => element instanceof HTMLImageElement && element.complete && element.naturalWidth > 0)).toBe(true);
+    await page.screenshot({ path: `test-results/satzivo-card-${width}.png` });
+    await card.getByRole("link", { name: "Project details" }).click();
+    await expect(page).toHaveURL(/\/projects\/satzivo$/);
+    await expect(page.locator("h1")).toContainText("satzivo");
+    await expect(page.locator("#status").locator("..")).toContainText("Authenticated learning flows were not exercised");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  }
 });
 
 test("manual theme persists; system mode follows device preference", async ({ page }) => {
